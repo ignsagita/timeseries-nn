@@ -1,0 +1,13 @@
+numpy>=1.23
+pandas>=1.5
+matplotlib>=3.6
+seaborn>=0.12
+scikit-learn>=1.2
+statsmodels>=0.13
+tensorflow>=2.12
+torch>=2.0
+sktime>=0.21
+wildboar>=1.2
+numba>=0.57
+darts>=0.30
+jupyterlab>=3.6
