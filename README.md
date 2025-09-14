@@ -5,8 +5,7 @@
 Energy demand forecasting is critical for balancing supply, reducing costs, and supporting renewable integration. This project demonstrates how advanced machine learning models can 
 improve energy demand forecasting and pattern detection. Using Sweden’s SE_3 electricity market as a case, it compares traditional statistical methods with modern neural networks, 
 enabling better decision-making for energy planning, operations, and market analysis. In more detail, the repository (in `timeseries_nn.ipynb`) demonstrates exploratory analysis, motif 
-discovery, seasonal analysis, forecasting, and classification techniques for electricity load data. In a global picture, better forecasting could lead to lower operational costs and, with
-classification, we can detect anomalies for outages or demand spikes. 
+discovery, seasonal analysis, forecasting, and classification techniques for electricity load data. In a global picture, better forecasting could lead to lower operational costs, and with classification, we can detect anomalies for outages or demand spikes. 
 
 ---
 
@@ -88,6 +87,34 @@ pip install numpy pandas matplotlib seaborn scikit-learn statsmodels tensorflow 
 ---
 
 ## Key Results
-- “N-BEATS reduced forecasting error (MAPE) by 12% vs. SARIMAX baseline.”-
-- “LSTM captured seasonal consumption patterns missed by statistical models.”
-- “ROCKET achieved 90% classification accuracy in detecting abnormal load patterns.”
+<table>
+  <tr>
+    <th>model</th>
+    <th>MAE</th>
+    <th>RMSE</th>
+    <th>MAPE</th>
+  </tr>
+  <tr>
+    <td>SARIMA</td>
+    <td>1310.81</td>
+    <td>1533.40</td>
+    <td>18.31%</td>
+  </tr>
+  <tr>
+    <td>N-BEATS</td>
+    <td>337.21</td>
+    <td>461.05</td>
+    <td>4.29</td>
+  </tr>
+  <tr>
+    <td>LSTM</td>
+    <td>2527.70</td>
+    <td>2740.75</td>
+    <td>35.39</td>
+  </tr>
+</table>
+
+**Key Insights**
+- “N-BEATS reduced forecasting error (MAPE) by 14% vs. SARIMAX baseline.”-
+- “LSTM suffers because the data might have simple patterns with limited feature diversity.”
+- “ROCKET achieved 86% classification accuracy in detecting abnormal load patterns.”
